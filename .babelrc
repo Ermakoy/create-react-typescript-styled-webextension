@@ -2,47 +2,71 @@
   "env": {
     "test": {
       "presets": [
-        ["env", {
-          "modules": "commonjs",
-          "targets": {
-            "chrome": "55",
-            "firefox": "56"
+        [
+          "@babel/preset-env",
+          {
+            "modules": "commonjs",
+            "targets": {
+              "chrome": "55",
+              "firefox": "56"
+            }
           }
-        }],
-        "react"
+        ],
+        "@babel/preset-react"
       ],
       "plugins": [
-        ["transform-object-rest-spread", { "useBuiltIns": true }]
+        [
+          "@babel/plugin-proposal-object-rest-spread",
+          {
+            "useBuiltIns": true
+          }
+        ]
       ]
     },
     "development": {
       "presets": [
-        ["env", {
-          "modules": false,
-          "targets": {
-            "chrome": "55",
-            "firefox": "56"
+        [
+          "@babel/preset-env",
+          {
+            "modules": false,
+            "targets": {
+              "chrome": "55",
+              "firefox": "56"
+            }
           }
-        }],
-        "react"
+        ],
+        "@babel/preset-react"
       ],
       "plugins": [
-        ["transform-object-rest-spread", { "useBuiltIns": true }]
+        [
+          "@babel/plugin-proposal-object-rest-spread",
+          {
+            "useBuiltIns": true
+          }
+        ]
       ]
     },
     "production": {
       "presets": [
-        ["env", {
-          "modules": false,
-          "targets": {
-            "chrome": "55",
-            "firefox": "56"
+        [
+          "@babel/preset-env",
+          {
+            "modules": false,
+            "targets": {
+              "chrome": "55",
+              "firefox": "56"
+            }
           }
-        }],
-        "react"
+        ],
+        "@babel/preset-react"
       ],
       "plugins": [
-        ["transform-object-rest-spread", { "useBuiltIns": true }]
+        [
+          "@babel/plugin-proposal-object-rest-spread",
+          {
+            "useBuiltIns": true
+          }
+        ]
       ]
     }
   }
