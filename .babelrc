@@ -7,8 +7,9 @@
           {
             "modules": "commonjs",
             "targets": {
-              "chrome": "55",
-              "firefox": "56"
+              "browsers": [
+                  "last 3 versions"
+              ]
             }
           }
         ],
@@ -20,7 +21,8 @@
           {
             "useBuiltIns": true
           }
-        ]
+        ],
+        "babel-plugin-styled-components"
       ]
     },
     "development": {
@@ -43,7 +45,8 @@
           {
             "useBuiltIns": true
           }
-        ]
+        ],
+        "babel-plugin-styled-components"
       ]
     },
     "production": {

@@ -1,7 +1,6 @@
 {
   "name": "create-react-typescript-sass-webextension",
   "version": "0.1.0",
-  "description": "Boilerplate for building webextension targeting Chrome & Firefox with react, typescript and sass",
   "private": true,
   "scripts": {
     "start": "node scripts/start.js",
@@ -17,16 +16,8 @@
     "node": ">= 8.0.0",
     "npm": ">= 5.6.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/crimx/create-react-typescript-sass-webextension"
-  },
-  "homepage": "https://github.com/crimx/create-react-typescript-sass-webextension",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/crimx/create-react-typescript-sass-webextension/issues"
-  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
@@ -40,6 +31,7 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "styled-components": "^4.1.2",
+    "tslint-react": "^3.6.0",
     "web-ext-types": "^3.0.0",
     "webextension-polyfill": "^0.3.1"
   },
@@ -52,12 +44,13 @@
     "@babel/runtime": "^7.0.0",
     "@commitlint/cli": "^6.0.2",
     "@commitlint/config-conventional": "^6.0.2",
-    "@types/jest": "^22.0.1",
+    "@types/jest": "^23.3.10",
     "@types/sinon-chrome": "^2.2.0",
     "autoprefixer": "^7.2.5",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.4.2",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.0",
+    "babel-plugin-styled-components": "^1.9.2",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "^2.3.0",
     "chokidar": "^2.0.0",
@@ -73,7 +66,7 @@
     "generate-json-webpack-plugin": "^0.2.2",
     "html-webpack-plugin": "^2.30.1",
     "husky": "^1.2.0",
-    "jest": "^22.0.4",
+    "jest": "^23.6.0",
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
     "node-sass": "^4.7.2",
@@ -88,10 +81,11 @@
     "standard-version": "^4.4.0",
     "style-loader": "^0.20.3",
     "text-transform-loader": "^2.0.0",
-    "ts-jest": "^22.4.6",
+    "ts-jest": "^23.10.5",
     "ts-lint": "^4.5.1",
-    "ts-loader": "^3.2.0",
+    "ts-loader": "^5.3.1",
     "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
     "tslint-config-standard": "^7.0.0",
     "typescript": "^3.1.6",
     "uglifyjs-webpack-plugin": "^1.3.0",
@@ -102,7 +96,10 @@
   "jest": {
     "globals": {
       "ts-jest": {
-        "useBabelrc": true
+        "babelConfig": true,
+        "diagnostics": {
+          "warnOnly": true
+        }
       }
     },
     "collectCoverageFrom": [
@@ -112,15 +109,15 @@
       "<rootDir>/config/polyfills.js"
     ],
     "testMatch": [
-      "<rootDir>/test/unit/**/*.{ts,tsx,js,jsx}",
+      "<rootDir>/src/**/?(*.)(spec|test).{ts,tsx,js,jsx}",
       "<rootDir>/src/**/__tests__/**/*.{ts,tsx,js,jsx}",
-      "<rootDir>/src/**/?(*.)(spec|test).{ts,tsx,js,jsx}"
+      "<rootDir>/test/unit/**/*.{ts,tsx,js,jsx}"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
     "transform": {
-      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest",
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.tsx?$": "ts-jest",
       "^.+\\.s?css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(ts|tsx|js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
@@ -130,13 +127,6 @@
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     },
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json",
-      "jsx",
-      "node"
-    ]
+    "preset": "ts-jest/presets/js-with-babel"
   }
 }

@@ -1,12 +1,12 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 // Shared components
 import CompA from '../components/CompA'
 // Private components
 import App from './components/App'
 
-const Global = createGlobalStyle`
+const Global = styled.div`
   min-width: 800px;
   margin: 0;
   padding: 0;
@@ -17,6 +17,9 @@ const Global = createGlobalStyle`
  */
 
 ReactDOM.render(
-  <div><Global /><App/><CompA/></div>,
+  <Global>
+    <App />
+    <CompA />
+  </Global>,
   document.getElementById('root') as HTMLElement
 )

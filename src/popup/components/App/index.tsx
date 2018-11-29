@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled, { css, keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 const logo = require('../../../assets/logo.svg')
 
 const AppLogoSpin = keyframes`
@@ -26,20 +26,15 @@ const AppIntro = styled.p`
   font-size: large;
 `
 
-class Comp extends React.Component<{}, any> {
-  render () {
-    return (
-      <App>
-        <AppHeader>
-          <AppLogo src={logo} className='App-logo' alt='logo' />
-          <h2>Create React Typescript Sass Webextension</h2>
-        </AppHeader>
-        <AppIntro>
-          Check <a href='https://github.com/crimx/create-react-typescript-sass-webextension' target='_blank' rel='noopener'>README</a> for instructions.
-        </AppIntro>
-      </App>
-    )
-  }
-}
+const Comp = () => (
+  <App>
+    <AppHeader>
+      <AppLogo src={logo} alt='logo' />
+      <h2>Create React Typescript Sass Webextension</h2>
+    </AppHeader>
+    <AppIntro>
+      Check <a href='https://github.com/crimx/create-react-typescript-sass-webextension' target='_blank' rel='noopener'>README</a> for instructions.
+    </AppIntro>
+  </App>)
 
 export default Comp
