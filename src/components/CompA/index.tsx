@@ -2,7 +2,17 @@
  * Shared component
  */
 import * as React from 'react'
-import './style/index.scss'
+import styled from 'styled-components'
+
+const CompA = styled.div`
+  padding: 10px;
+  text-align: center;
+  border: 5px solid orangered;
+`
+
+const CompATitle = styled.h1`
+  color: orange;
+`
 
 class Comp extends React.Component<{}, any> {
   _greet = () => {
@@ -13,10 +23,10 @@ class Comp extends React.Component<{}, any> {
 
   render () {
     return (
-      <div className='comp-a'>
-        <h1 className='comp-a-title'>This is a shared component</h1>
+      <CompA>
+        <CompATitle>This is a shared component</CompATitle>
         <button onClick={this._greet}>Say Hi to Background Script!</button>
-      </div>
+      </CompA>
     )
   }
 }

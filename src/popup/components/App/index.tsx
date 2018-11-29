@@ -1,19 +1,43 @@
 import * as React from 'react'
-import './style/index.scss'
+import styled, { css, keyframes } from 'styled-components'
 const logo = require('../../../assets/logo.svg')
+
+const AppLogoSpin = keyframes`
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+`
+
+const App = styled.div`
+  text-align: center;
+`
+
+const AppLogo = styled.img`
+  animation: ${AppLogoSpin} infinite 20s linear;
+  height: 80px;
+`
+
+const AppHeader = styled.div`
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+`
+const AppIntro = styled.p`
+  font-size: large;
+`
 
 class Comp extends React.Component<{}, any> {
   render () {
     return (
-      <div className='App'>
-        <div className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
+      <App>
+        <AppHeader>
+          <AppLogo src={logo} className='App-logo' alt='logo' />
           <h2>Create React Typescript Sass Webextension</h2>
-        </div>
-        <p className='App-intro'>
+        </AppHeader>
+        <AppIntro>
           Check <a href='https://github.com/crimx/create-react-typescript-sass-webextension' target='_blank' rel='noopener'>README</a> for instructions.
-        </p>
-      </div>
+        </AppIntro>
+      </App>
     )
   }
 }
