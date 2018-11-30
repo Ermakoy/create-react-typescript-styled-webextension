@@ -3,5 +3,5 @@
   "rules": {
     "trailing-comma": false
   },
-  "defaultSeverity": "warning"
+  "defaultSeverity": "error"
 }
