@@ -2,13 +2,11 @@
 
 const fs = require('fs')
 const path = require('path')
-const autoprefixer = require('autoprefixer')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin')
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const paths = require('./paths')
 const getClientEnvironment = require('./env')
 const argv = require('minimist')(process.argv.slice(2))
