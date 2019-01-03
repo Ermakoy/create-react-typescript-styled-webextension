@@ -1,19 +1,15 @@
-# Create React Typescript Sass Webextension
+# Create React Typescript Styled-Components Webextension
 
-[![Build Status](https://travis-ci.org/crimx/create-react-typescript-sass-webextension.svg)](https://travis-ci.org/crimx/create-react-typescript-sass-webextension)
-[![Dependencies](https://img.shields.io/david/crimx/create-react-typescript-sass-webextension.svg)](https://david-dm.org/crimx/create-react-typescript-sass-webextension)
-[![DevDependencies](https://img.shields.io/david/dev/crimx/create-react-typescript-sass-webextension.svg)](https://david-dm.org/crimx/create-react-typescript-sass-webextension#info=devDependencies)
+[![Build Status](https://travis-ci.org/Ermakoy/create-react-typescript-sass-webextension.svg?branch=master)](https://travis-ci.org/Ermakoy/create-react-typescript-sass-webextension)
+[![Dependencies](https://david-dm.org/Ermakoy/create-react-typescript-styled-webextension.svg)](https://david-dm.org/crimx/create-react-typescript-sass-webextension)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/crimx/create-react-typescript-sass-webextension.svg)](https://greenkeeper.io/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg)](https://conventionalcommits.org)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com/)
 
 Battery-included starter-kit, minimum configuration yet flexible and powerful.
 
-[中文](https://github.com/crimx/create-react-typescript-sass-webextension/blob/master/docs/zh-CN.md)
-
-- React, TypeScript and Sass support
+- React, TypeScript and Styled-Components support
 - Unit testing with Jest and sinon-chrome
 - Fake Webextension environment for easy-tweaking UI
 - Auto-generates entries
@@ -22,10 +18,10 @@ Battery-included starter-kit, minimum configuration yet flexible and powerful.
 # Install
 
 <pre>
-git clone git@github.com:crimx/create-react-typescript-sass-webextension.git <strong>YourRepoName</strong>
+git clone git@github.com:Ermakoy/create-react-typescript-styled-webextension.git <strong>YourRepoName</strong>
 cd <strong>YourRepoName</strong>
 git remote set-url git@github.com:<strong>YourUserName</strong>/<strong>YourRepoName</strong>.git
-yarn install
+yarn
 </pre>
 
 # Usage
@@ -33,7 +29,7 @@ yarn install
 You only need to deal with things within `src` in most of the cases:
 
 - This boilerplate comes with three common parts of a typical extension - `backgroud`, `content` and `popup`, which can be simpily deleted if you don't need them. Webpack entries are auto-generated.
-- If you need to add more pages or scripts, just add a directory in `src`. The directory name will be used as entry name. Inside the directory there should be a `index.(js|jsx|ts|tsx)` file and an `index.html` for template if you need to generate HTML file too. See [popup](https://github.com/crimx/create-react-typescript-sass-webextension/tree/master/src/popup) for example.
+- If you need to add more pages or scripts, just add a directory in `src`. The directory name will be used as entry name. Inside the directory there should be a `index.(js|jsx|ts|tsx)` file and an `index.html` for template if you need to generate HTML file too. See [popup](https://github.com/Ermakoy/create-react-typescript-styled-webextension/tree/master/src/popup) for example.
 - `background`, `components`, `assets` and `manifest` are reserved names.
   - `background` is for backgournd script. Other entries won't be loaded to the fake Webextension environment.
   - `components` is for shared components.
@@ -88,3 +84,7 @@ The boilerplate uses the TypeScript variation of [Standard](https://github.com/b
 ## More Options
 
 Supports most of the [create-reate-app](https://github.com/facebookincubator/create-react-app) options.
+
+## Related
+
+Heavily inspired by [this](https://github.com/crimx/create-react-typescript-sass-webextension) boilerplate
