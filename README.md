@@ -18,7 +18,7 @@ Battery-included starter-kit, minimum configuration yet flexible and powerful.
 # Install
 
 <pre>
-git clone git@github.com:Ermakoy/create-react-typescript-styled-webextension.git <strong>YourRepoName</strong>
+git clone https://github.com/Ermakoy/create-react-typescript-styled-webextension.git <strong>YourRepoName</strong>
 cd <strong>YourRepoName</strong>
 git remote set-url git@github.com:<strong>YourUserName</strong>/<strong>YourRepoName</strong>.git
 yarn
